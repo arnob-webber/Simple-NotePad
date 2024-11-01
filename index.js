@@ -1,40 +1,72 @@
-const notesContainer = document.getElementById('notesContainer');
-const newNoteBtn = document.getElementById('newNoteBtn');
+function _0x20f3() {
+	const _0x828b5a = ['click', 'Click\x20to\x20edit...', '7608096BwtRAd', 'style', 'remove', '&#169;\x20Coded\x20by\x20Arnob', 'getElementById', 'position', 'addEventListener', 'map', 'setItem', 'width', 'forEach', 'note-buttons', '272084SAYsOo', 'DOMContentLoaded', 'note', 'footer', 'backgroundColor', '4903199xIfJqx', '2Drfqbu', 'stringify', 'padding', 'focus', 'button', '10px', '3976005tSWIgv', 'note-content', 'fixed', '51RjiGsQ', 'newNoteBtn', 'bottom', 'appendChild', '704034ERUvfM', '36243qlmYVJ', 'innerText', 'children', 'createElement', '8090zRKLot', 'div', '100%', 'className', 'body', 'notesContainer', 'center', 'Delete', 'getItem', '847994cgEYeH', 'innerHTML'];
+	_0x20f3 = function() {
+		return _0x828b5a;
+	};
+	return _0x20f3();
+}
+const _0x5e9bc4 = _0x5d97;
+(function(_0x2ba913, _0x37beb6) {
+	const _0x4f278d = _0x5d97,
+		_0x5425d4 = _0x2ba913();
+	while (!![]) {
+		try {
+			const _0x3f4679 = parseInt(_0x4f278d(0xb0)) / 0x1 * (parseInt(_0x4f278d(0xcb)) / 0x2) + -parseInt(_0x4f278d(0xb9)) / 0x3 * (parseInt(_0x4f278d(0xaa)) / 0x4) + -parseInt(_0x4f278d(0xb6)) / 0x5 + parseInt(_0x4f278d(0xbd)) / 0x6 + -parseInt(_0x4f278d(0xaf)) / 0x7 + -parseInt(_0x4f278d(0xcf)) / 0x8 + -parseInt(_0x4f278d(0xbe)) / 0x9 * (-parseInt(_0x4f278d(0xc2)) / 0xa);
+			if (_0x3f4679 === _0x37beb6) break;
+			else _0x5425d4['push'](_0x5425d4['shift']());
+		} catch (_0x29f3a4) {
+			_0x5425d4['push'](_0x5425d4['shift']());
+		}
+	}
+}(_0x20f3, 0x97675));
+const notesContainer = document[_0x5e9bc4(0xd3)](_0x5e9bc4(0xc7)),
+	newNoteBtn = document[_0x5e9bc4(0xd3)](_0x5e9bc4(0xba));
 
-function createNote(content = 'Click to edit...') {
-    const note = document.createElement('div');
-    note.className = 'note';
-    note.contentEditable = true;
-    note.innerText = content;
-
-    note.addEventListener('click', () => {
-        if (note.innerText === 'Click to edit...') {
-            note.innerText = ''; 
-        }
-    });
-
-    note.addEventListener('blur', () => {
-        if (note.innerText.trim() === '') {
-            note.innerText = 'Click to edit...'; 
-        }
-        saveNotes();
-    });
-
-    notesContainer.appendChild(note);
+function createNote(_0x4bc454 = _0x5e9bc4(0xce)) {
+	const _0x5591be = _0x5e9bc4,
+		_0x340028 = document[_0x5591be(0xc1)](_0x5591be(0xc3));
+	_0x340028[_0x5591be(0xc5)] = _0x5591be(0xac);
+	const _0x1896e3 = document[_0x5591be(0xc1)](_0x5591be(0xc3));
+	_0x1896e3['className'] = _0x5591be(0xb7), _0x1896e3['contentEditable'] = !![], _0x1896e3[_0x5591be(0xbf)] = _0x4bc454;
+	const _0x31dd12 = document['createElement']('div');
+	_0x31dd12['className'] = _0x5591be(0xa9);
+	const _0x128a79 = document[_0x5591be(0xc1)](_0x5591be(0xb4));
+	_0x128a79['innerText'] = 'Edit', _0x128a79[_0x5591be(0xd5)](_0x5591be(0xcd), () => {
+		const _0x46527f = _0x5591be;
+		_0x1896e3[_0x46527f(0xb3)]();
+	});
+	const _0x3aace8 = document[_0x5591be(0xc1)]('button');
+	_0x3aace8['innerText'] = _0x5591be(0xc9), _0x3aace8[_0x5591be(0xd5)](_0x5591be(0xcd), () => {
+		const _0x5ecb39 = _0x5591be;
+		_0x340028[_0x5ecb39(0xd1)](), saveNotes();
+	}), _0x31dd12[_0x5591be(0xbc)](_0x128a79), _0x31dd12['appendChild'](_0x3aace8), _0x340028[_0x5591be(0xbc)](_0x31dd12), _0x340028['appendChild'](_0x1896e3), _0x1896e3[_0x5591be(0xd5)]('blur', () => {
+		const _0x5ce90e = _0x5591be;
+		_0x1896e3[_0x5ce90e(0xbf)]['trim']() === '' && (_0x1896e3[_0x5ce90e(0xbf)] = _0x5ce90e(0xce)), saveNotes();
+	}), notesContainer[_0x5591be(0xbc)](_0x340028);
 }
 
 function saveNotes() {
-    const notes = Array.from(notesContainer.children).map(note => note.innerText);
-    localStorage.setItem('notes', JSON.stringify(notes));
+	const _0x23cf60 = _0x5e9bc4,
+		_0x142f4d = Array['from'](notesContainer[_0x23cf60(0xc0)])[_0x23cf60(0xd6)](_0x2d2610 => _0x2d2610['querySelector']('.note-content')[_0x23cf60(0xbf)]);
+	localStorage[_0x23cf60(0xd7)]('notes', JSON[_0x23cf60(0xb1)](_0x142f4d));
 }
 
 function loadNotes() {
-    const notes = JSON.parse(localStorage.getItem('notes'));
-    if (notes) {
-        notes.forEach(note => createNote(note));
-    }
+	const _0x471792 = _0x5e9bc4,
+		_0x1ff7d7 = JSON['parse'](localStorage[_0x471792(0xca)]('notes'));
+	_0x1ff7d7 && _0x1ff7d7[_0x471792(0xd9)](_0x5358a0 => createNote(_0x5358a0));
 }
 
-newNoteBtn.addEventListener('click', createNote);
-
-loadNotes();
+function _0x5d97(_0x49df90, _0x184015) {
+	const _0x20f3ba = _0x20f3();
+	return _0x5d97 = function(_0x5d9714, _0x1ef025) {
+		_0x5d9714 = _0x5d9714 - 0xa9;
+		let _0x4ffa52 = _0x20f3ba[_0x5d9714];
+		return _0x4ffa52;
+	}, _0x5d97(_0x49df90, _0x184015);
+}
+newNoteBtn[_0x5e9bc4(0xd5)]('click', createNote), loadNotes(), document[_0x5e9bc4(0xd5)](_0x5e9bc4(0xab), function() {
+	const _0x59de5f = _0x5e9bc4;
+	var _0x5da4e5 = document[_0x59de5f(0xc1)](_0x59de5f(0xad));
+	_0x5da4e5[_0x59de5f(0xd0)]['textAlign'] = _0x59de5f(0xc8), _0x5da4e5['style'][_0x59de5f(0xb2)] = _0x59de5f(0xb5), _0x5da4e5[_0x59de5f(0xd0)][_0x59de5f(0xd4)] = _0x59de5f(0xb8), _0x5da4e5[_0x59de5f(0xd0)][_0x59de5f(0xbb)] = '0', _0x5da4e5['style'][_0x59de5f(0xd8)] = _0x59de5f(0xc4), _0x5da4e5[_0x59de5f(0xd0)][_0x59de5f(0xae)] = '#f1f1f1', _0x5da4e5[_0x59de5f(0xcc)] = _0x59de5f(0xd2), document[_0x59de5f(0xc6)][_0x59de5f(0xbc)](_0x5da4e5);
+});

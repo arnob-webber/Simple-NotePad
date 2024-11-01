@@ -52,11 +52,34 @@ button:hover {
     padding: 15px;
     width: calc(50% - 20px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
     transition: transform 0.3s;
+    overflow: hidden;
+    word-wrap: anywhere;
 }
 
 .note:hover {
     transform: scale(1.02);
+}
+
+.note-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.note-buttons button {
+    background-color: #b4b4b4;
+    border: none;
+    border-radius: 2em;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.note-buttons button:hover {
+    background-color: #c43dfa;
+    transition: 0.3s;
 }
 
 @media (max-width: 600px) {
